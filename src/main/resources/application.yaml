@@ -1,0 +1,17 @@
+spring:
+  cloud:
+    stream:
+      bindings:
+        subscribe-in-0:
+          destination: topic1
+        publish-out-0:
+          destination: topic1
+      kafka:
+        binder:
+          brokers: localhost:9092
+          consumer-properties:
+            key.serializer: org.apache.kafka.common.serialization.StringSerializer
+            value.serializer: org.apache.kafka.common.serialization.StringSerializer
+          producer-properties:
+            key.serializer: org.apache.kafka.common.serialization.StringSerializer
+            value.serializer: org.apache.kafka.common.serialization.StringSerializer
