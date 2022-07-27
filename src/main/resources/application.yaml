@@ -4,8 +4,12 @@ spring:
       bindings:
         subscribe-in-0:
           destination: topic1
+          consumer:
+            use-native-decoding: true
         publish-out-0:
           destination: topic1
+          producer:
+            use-native-encoding: true
       kafka:
         binder:
           brokers: localhost:9092
