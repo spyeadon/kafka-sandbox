@@ -1,1 +1,3 @@
 rootProject.name = 'kafka-sandbox'
+include 'consumer'
+include 'producer'

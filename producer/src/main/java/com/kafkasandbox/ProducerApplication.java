@@ -6,10 +6,10 @@ import org.springframework.scheduling.annotation.EnableScheduling;
 
 @SpringBootApplication
 @EnableScheduling
-public class KafkaSandboxApplication {
+public class ProducerApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(KafkaSandboxApplication.class, args);
+		SpringApplication.run(ProducerApplication.class, args);
 	}
 
 }
