@@ -34,3 +34,5 @@ hs_err_pid*
 *.gradle/*
 
 /build
+producer/build
+consumer/build
