@@ -38,6 +38,7 @@ services:
       - "8081:8081"
     volumes:
       - ./scripts/kafka:/var/kafka
+      - ./src/main/avro:/var/avro-schema
     environment:
       SCHEMA_REGISTRY_HOST_NAME: schema-registry
       SCHEMA_REGISTRY_LISTENERS: http://0.0.0.0:8081

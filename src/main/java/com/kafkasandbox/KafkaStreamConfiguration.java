@@ -13,9 +13,9 @@ import java.util.function.Function;
 public class KafkaStreamConfiguration {
 
     @Bean
-    public Function<KStream<String, String>, KStream<String, String>> eventStream() {
+    public Function<KStream<String, Event>, KStream<String, Event>> eventStream() {
         return stream -> stream
                 .peek(((key, value) -> log.info("received event with key: {}", key)))
-                .map(((key, value) -> KeyValue.pair(key, "Value: '" + value + "' has been enriched")));
+                .map((KeyValue::pair));
     }
 }

@@ -7,9 +7,11 @@ spring:
       bindings:
         eventStream-in-0:
           destination: inputTopic
+          content-type: application/*+avro
           group: group1
         eventStream-out-0:
           destination: outputTopic
+          content-type: application/*+avro
           group: group1
       kafka:
         binder:
@@ -21,4 +23,4 @@ spring:
             configuration:
               default:
                 key.serde: org.apache.kafka.common.serialization.Serdes$StringSerde
-                value.serde: org.apache.kafka.common.serialization.Serdes$StringSerde
+                value.serde: io.confluent.kafka.streams.serdes.avro.SpecificAvroSerde
